@@ -1,0 +1,2 @@
+# docker-sbt
+Dockernized sbt
