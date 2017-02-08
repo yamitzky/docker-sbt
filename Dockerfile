@@ -10,6 +10,11 @@ RUN apt-get update -y --fix-missing && \
   openssh-client \
   git
 
+RUN mkdir -p ~/.ssh && \
+  echo 'Host *\n\
+  StrictHostKeyChecking no\n\
+  UserKnownHostsFile=/dev/null' >> ~/.ssh/config
+
 WORKDIR /usr/src/app
 
 CMD sbt
