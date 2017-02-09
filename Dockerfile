@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-RUN curl -sL https://dl.bintray.com/sbt/native-packages/sbt/0.13.13/sbt-0.13.13.zip > /tmp/sbt.zip && \
+RUN curl -sL https://dl.bintray.com/sbt/native-packages/sbt/0.13.12/sbt-0.13.12.zip > /tmp/sbt.zip && \
   unzip /tmp/sbt.zip -d /tmp && \
   cp -r /tmp/sbt/* /usr/local/ && \
   sbt about
